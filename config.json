@@ -1,0 +1,45 @@
+{
+    "auth": {
+
+        "discord": "ODM2NjczNDg4NDk2MjMwNDMy.YIha6A.vObFAE_YjWQyZpzdpxIH_Ci9e1M",
+        "tmi_name": "bot_flixxgamez",
+        "tmi_auth": "oauth:i9v7izfkfm4dnmowufxsdljiwzey25"
+        
+    },
+
+    "membercount": {
+
+        "guild": "445308722168987648",
+        "channelID": "570353865032073226",
+        "prefix": "👥 | Membercount: "
+
+    },
+
+    "welcome": {
+
+        "welcome_channel": "454651692701450273",
+        "rules_channel": "517496748260720640",
+        "news_channel": "459414181066833950"
+
+    },
+
+    "goodbye": {
+
+        "goodbye_channel": "496394517910388776"
+
+    },
+
+    "config": {
+        
+        "botprefix": "",
+        "ChannelLink": "https://twitch.tv/Kenjih_"
+
+    },
+    
+    "eastereggs": {
+        
+        "kekbab":"",
+        "MilanaIstFett": "fett"
+
+    }
+}
