@@ -1,4 +1,4 @@
-# Kenjih - Serverbot (letzte Stable ist v1.0.1
+# Kenjih - Serverbot (letzte Stable ist v1.0.0)
 
 ## Willkommen auf der Repo-Seite für den Kenjih - Serverbot 👋
 
