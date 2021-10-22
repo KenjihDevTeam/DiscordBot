@@ -1,6 +1,3 @@
-const mongoose = require('mongoose');
-const VoiceLog = require('../../API/MongoDB/schemas');
-
 //Setzt das Module
 module.exports = {
 
