@@ -1,4 +1,4 @@
-# Kenjih - Serverbot
+# Kenjih - Serverbot (letzte Stable ist v1.0.1
 
 ## Willkommen auf der Repo-Seite für den Kenjih - Serverbot 👋
 
@@ -10,4 +10,4 @@
 5. Lade dir alle nötige Module mit `npm install` herunter
 6. Starte den Bot mit `node index.js`
 
-2021 © Kenjih Devteam - All Rights Reserved 
+2021 © Kenjih Devteam - All Rights Reserved 0
