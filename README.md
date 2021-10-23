@@ -1,4 +1,4 @@
-# Kenjih - Serverbot (Version 1.1.0)
+# Kenjih - Serverbot (Version 1.1)
 
 ## Willkommen auf der Repo-Seite für den Kenjih - Serverbot 👋
 
