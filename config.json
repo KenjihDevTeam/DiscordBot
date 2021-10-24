@@ -1,0 +1,55 @@
+{
+    "config": {
+        "botprefix": "?",
+        "channellink": "https://twitch.tv/Kenjih_",
+        "version": "v1.0.0"
+    },
+
+    "commands": {
+        "channel_id": "518149483696095263",
+        "id": "445308722168987648"
+    },
+
+    "api": {
+        "port": "8443",
+
+        "memberCount": {
+            "id": "445308722168987648"
+        }
+    },
+
+    "events": {
+
+        "membercount": {
+            "channelID": "570353865032073226",
+            "prefix": "👥 | Membercount: "
+        },
+    
+        "voicesupport": {
+            "voice_channel": "608787221218066432",
+            "ping_channel": "837422560412696586",
+            "roleid": "591136816510402560"
+        },
+    
+        "ticketsupport": {
+            "prefix": "📝│",
+            "parent": "856987124456620092",
+            "discordID": "864237220470456322",
+            "twitchID": "864237304959729704",
+            "logID": "866704209567285269"
+        },
+    
+        "voicelog": {
+            "channelid": "843552134380388362"
+        },
+
+        "mod_log": {
+            "channelid": "496385897366028289"
+        },
+    
+        "member_log": {
+            "channelid": "886537007189331989"
+        }
+
+    }
+}
