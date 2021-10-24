@@ -2,7 +2,7 @@ module.exports = {
 
     name: 'MemberCount',
     description: 'Dieses Event ändert den Channelnamen vom MemberCount', 
-    execute(Discord, client, config, color, member) {
+    execute(Discord, client, config, member) {
 
         //Funktion für das Umbenennen
         const getMemberCount = (guild) => {

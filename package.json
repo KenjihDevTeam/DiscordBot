@@ -1,7 +1,7 @@
 {
-  "name": "kenjihbot",
+  "name": "kenjih-serverbot",
   "version": "1.0.0",
-  "description": "",
+  "description": "Der Kenjih - Serverbot ist bietet viele Tools auf dem Community-Server",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -20,5 +20,14 @@
     "express": "^4.17.1",
     "mongoose": "^6.0.11",
     "ytdl-core": "^4.9.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flixxgamez/kenjih.git"
+  },
+  "bugs": {
+    "url": "https://github.com/flixxgamez/kenjih/issues"
+  },
+  "homepage": "https://github.com/flixxgamez/kenjih#readme"
 }

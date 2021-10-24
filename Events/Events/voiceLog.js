@@ -19,30 +19,30 @@ module.exports = {
             URL = user.user.defaultAvatarURL;
         } else {
         URL = user.user.avatarURL();
-        }
+        };
 
         //Überprüft auf das richtige Event
-        if(oldChannelID === newChannelID) return
+        if(oldChannelID === newChannelID) return;
         else{
 
-            if(newChannelID === null && newState.channel != null) {
+            if(newChannelID === null) {
 
                 //Embed für den Log-Channel
                 const leaveEmbed = new Discord.MessageEmbed()
                     .setAuthor(`${user.user.tag}`, URL, null)
-                    .setDescription(`<@${userID}> hat <#${oldChannelID}> verlassen`)
+                    .setDescription(`**<@${userID}> hat <#${oldChannelID}> verlassen**`)
                     .setFooter(`ID: ${userID}`)
                     .setTimestamp()
                     .setColor('#e74a3b')
                 log.send(leaveEmbed);
 
 
-            } else if(oldChannelID === null && newState.channel != null) {
+            } else if(oldChannelID === null) {
 
                 //Embed für den Log-Channel
                 const joinEmbed = new Discord.MessageEmbed()
                     .setAuthor(`${user.user.tag}`, URL, null)
-                    .setDescription(`<@${userID}> hat <#${newChannelID}> betreten`)
+                    .setDescription(`**<@${userID}> hat <#${newChannelID}> betreten**`)
                     .setFooter(`ID: ${userID}`)
                     .setTimestamp()
                     .setColor('#1cc88a')
@@ -54,7 +54,7 @@ module.exports = {
                 //Embed für den Log-Channel
                 const switchEmbed = new Discord.MessageEmbed()
                     .setAuthor(`${user.user.tag}`, URL, null)
-                    .setDescription(`<@${userID}> **ist von** <#${oldChannelID}> **in** <#${newChannelID}> **gegangen**`)
+                    .setDescription(`**<@${userID}> ist von <#${oldChannelID}> in <#${newChannelID}> gegangen**`)
                     .setFooter(`ID: ${userID}`)
                     .setTimestamp()
                     .setColor('#36b9cc')

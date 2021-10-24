@@ -3,7 +3,7 @@ module.exports = {
 
     name: 'joiner',
     discription: 'Dieses Event schickt automatisch eine Infonachricht, wenn ein Nutzer den Server betreten hat',
-    execute(Discord, client, config, color, member) {
+    execute(Discord, client, config, member) {
 
         //Setzt URL
         let URL;

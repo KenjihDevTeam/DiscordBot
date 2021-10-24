@@ -2,19 +2,19 @@
     "config": {
         "botprefix": "?",
         "channellink": "https://twitch.tv/Kenjih_",
-        "version": "v1.0.2"
+        "version": "v1.0.0"
     },
 
     "commands": {
-        "id": "518149483696095263",
-        "admin": "471360179703906328"
+        "channel_id": "518149483696095263",
+        "id": "445308722168987648"
     },
 
     "api": {
         "port": "8443",
 
         "memberCount": {
-            "id": "847510235739979817"
+            "id": "445308722168987648"
         }
     },
 

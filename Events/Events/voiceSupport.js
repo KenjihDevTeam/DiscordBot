@@ -2,7 +2,7 @@ module.exports = {
 
     name: 'VoiceSupport',
     description: 'Dieses Event pingt die Moderatoren, wenn ein Nutzer den Voicesupport betritt',
-    execute(Discord, client, config, color, oldState, newState){
+    execute(Discord, client, config, oldState, newState){
 
                     
         //Überprüft ob der Channel gewechselt wurde

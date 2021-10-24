@@ -3,7 +3,7 @@ module.exports = {
 
     name: 'leaver',
     discription: 'Dieses Event schickt automatisch eine Infonachricht, wenn ein Nutzer den Server verlassen hat',
-    execute(Discord, client, config, color, member) {
+    execute(Discord, client, config, member) {
 
         //Setzt URL
         let URL;

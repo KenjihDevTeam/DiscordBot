@@ -4,12 +4,11 @@ require('discord-reply')
 const client = new Discord.Client();
 
 //Installiert externe Packages
-require('dotenv').config()
 const color = require('colors');
-const mongoose = require('mongoose');
 
 //Zieht Config-Daten 
 const config = require('./config.json');
+require('dotenv').config();
 const auth = process.env.TOKEN;
 
 //Lädt Dateien
@@ -32,6 +31,7 @@ client.on('ready', () => {
 
     //Lädt den Eventhandler
     require('./Events/EventHandler').execute(Discord, client, config, color);
+    require('./API/memberCount').execute(Discord, client, config);
 
 });
 
@@ -39,24 +39,24 @@ client.on('ready', () => {
 client.on('message', message => {
 
         //Startet den Commandhandler
-        if(!message.content.startsWith(prefix) || message.author.bot) return;
+        const command_id = config.commands.channel_id;
+        if(message.channel.id === command_id) {
+            if (!message.content.startsWith(prefix) || message.author.bot) return;
 
-        if(message.content === '?') return;
 
-        const args = message.content.slice(prefix.length).trim().split(/ +/);
-        const command = args.shift().toLowerCase();
+            const args = message.content.slice(prefix.length).trim().split(/ +/);
+            const command = args.shift().toLowerCase();
 
-        if(!client.commands.has(command)){
-            message.author.send('Dieser Command existiert nicht! Überprüfe deine Rechtschreibung');
-            message.delete();
-        } else try{
-            client.commands.get(command).execute(Discord, client, config, message, args);
-        } catch {
-            console.log(error.red);
-            message.author.send('Es gab einen Fehler den Command auszuführen');
-            message.delete();
-        };
-        
+            if (!client.commands.has(command)) {
+                message.lineReply('❌ Dieser Command existiert nicht! Überprüfe deine Rechtschreibung ❌');
+            } else try {
+                client.commands.get(command).execute(Discord, client, config, message, args);
+            } catch {
+                console.log(error.red);
+                message.lineReply('❌ Es gab einen Fehler den Command auszuführen ❌');
+            }
+            ;
+        }
 });
 
 //Loggt den Client ein
