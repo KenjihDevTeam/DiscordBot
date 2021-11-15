@@ -25,5 +25,7 @@ module.exports = {
         const log = client.channels.cache.get(logID);
         log.send(leaverEmbed);
 
+        console.log(`Events » Joiner » Der Nutzer ${member.tag} hat den Server verlassen`.brightBlue);
+
     }
 }

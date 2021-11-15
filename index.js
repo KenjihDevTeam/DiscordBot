@@ -6,7 +6,7 @@ const client = new Discord.Client();
 //Installiert externe Packages
 const color = require('colors');
 
-//Zieht Config-Daten 
+//Zieht Config-Daten
 const config = require('./config.json');
 require('dotenv').config();
 const auth = process.env.TOKEN;
@@ -26,12 +26,11 @@ const prefix = config.config.botprefix;
 client.on('ready', () => {
 
     //Loggt den erfolgreichen Login und setzt den Status
-    console.log('Discord » Der Discord-Bot hat sich erfolgreich verbunden!'.brightBlue);
+    console.log(config.config.start_text.brightBlue);
     client.user.setActivity(config.config.channellink, {type: "WATCHING"});
 
     //Lädt den Eventhandler
     require('./Events/EventHandler').execute(Discord, client, config, color);
-    require('./API/memberCount').execute(Discord, client, config);
 
 });
 
