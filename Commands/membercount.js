@@ -11,6 +11,8 @@ module.exports = {
         const membercount = guild.memberCount.toLocaleString();
         message.lineReply(`Es sind ${membercount} Leute auf dem Discord 💙`);
 
+        console.log(`Commands » Membercount » Der Nutzer ${message.author.tag} hat den Command ?membercount benutzt! `.brightBlue);
+
     }
 
 }

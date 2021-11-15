@@ -35,7 +35,7 @@ module.exports = {
                     .setTimestamp()
                     .setColor('#e74a3b')
                 log.send(leaveEmbed);
-
+                console.log(`Events » Voicelog » Der Nutzer ${user.user.tag} hat den Channel ${oldState.channel.name} verlassen.`.brightBlue);
 
             } else if(oldChannelID === null) {
 
@@ -48,6 +48,7 @@ module.exports = {
                     .setColor('#1cc88a')
 
                 log.send(joinEmbed);
+                console.log(`Events » Voicelog » Der Nutzer ${user.user.tag} hat den Channel ${newState.channel.name} betreten.`.brightBlue);
 
             } else {
 
@@ -60,7 +61,7 @@ module.exports = {
                     .setColor('#36b9cc')
 
                 log.send(switchEmbed);
-
+                console.log(`Events » Voicelog » Der Nutzer ${user.user.tag} ist aus dem Channel ${oldState.channel.name} in den Channel ${newState.channel.name} gegangen.`.brightBlue);
             }
 
         }

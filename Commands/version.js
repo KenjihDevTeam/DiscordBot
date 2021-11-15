@@ -9,6 +9,9 @@ module.exports = {
         const versionEmbed = `Der Server-Bot läuft gerade auf der Version ${version}`
 
         message.lineReply(versionEmbed);
+
+        console.log(`Commands » Version » Der Nutzer ${message.author.tag} hat den Command ?version benutzt`.brightBlue);
+
     }
 
 }
