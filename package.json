@@ -1,27 +1,43 @@
 {
-  "name": "kenjih-serverbot",
+  "name": "kenjih_bot",
   "version": "1.0.0",
-  "description": "Der Kenjih - Serverbot ist bietet viele Tools auf dem Community-Server",
-  "main": "index.js",
+  "description": "Kenjih Discord Bot",
+  "main": "build/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tsc && node .",
+    "format": "npx prettier --write .",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "lint:typings": "eslint typings/index.d.ts",
+    "test": "npm run lint && npm run lint:typings && npm run test:typescript && node .",
+    "test:typescript": "tsc",
+    "build": "npm run format && tsc",
+    "deploycmds": "npm run build && node build/index.js --deploy-commands"
   },
-  "author": "flixxgamez",
-  "license": "ISC",
-  "dependencies": {
-    "axios": "^0.21.4",
-    "colors": "^1.4.0",
-    "discord-reply": "^0.1.2",
-    "discord.js": "^12.5.3",
-    "dotenv": "^10.0.0"
-  },
-  "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/flixxgamez/kenjih.git"
+    "url": "git+https://github.com/KenjihDevTeam/DiscordBot.git"
   },
+  "author": "",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/flixxgamez/kenjih/issues"
+    "url": "https://github.com/KenjihDevTeam/DiscordBot/issues"
   },
-  "homepage": "https://github.com/flixxgamez/kenjih#readme"
+  "homepage": "https://github.com/KenjihDevTeam/DiscordBot#readme",
+  "dependencies": {
+    "@discordjs/rest": "^0.4.1",
+    "chart.js": "^2.9.4",
+    "chartjs-node-canvas": "^3.2.0",
+    "discord.js": "^13.6.0"
+  },
+  "devDependencies": {
+    "@types/chart.js": "^2.9.37",
+    "@types/node": "^17.0.30",
+    "@typescript-eslint/eslint-plugin": "^5.21.0",
+    "@typescript-eslint/parser": "^5.21.0",
+    "eslint": "^8.14.0",
+    "husky": "^7.0.4",
+    "prettier": "^2.6.2",
+    "typescript": "^4.6.4"
+  }
 }
