@@ -1,0 +1,8 @@
+# Ignore artifacts:
+*.json
+*.md
+*.js
+.gitignore
+.npmrc
+.pem
+build/
